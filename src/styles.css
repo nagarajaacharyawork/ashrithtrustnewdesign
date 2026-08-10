@@ -1,0 +1,282 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/*
+ * Ashrith Group of Institutions — light institutional design system.
+ * Blue = trust / education. Orange = admissions / action.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* Brand */
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-azure: var(--azure);
+  --color-saffron: var(--saffron);
+  --color-saffron-bright: var(--saffron-bright);
+  --color-mist: var(--mist);
+  --color-haze: var(--haze);
+  --color-cream: var(--cream);
+  --color-hairline: var(--hairline);
+
+  --shadow-soft: 0 1px 2px oklch(0.308 0.055 246.7 / 0.05), 0 12px 32px -18px oklch(0.308 0.055 246.7 / 0.35);
+  --shadow-lift: 0 2px 4px oklch(0.308 0.055 246.7 / 0.06), 0 28px 60px -30px oklch(0.308 0.055 246.7 / 0.45);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --navy: oklch(0.402 0.097 244.4); /* #064C78 */
+  --navy-deep: oklch(0.33 0.079 246); /* #07385B */
+  --azure: oklch(0.509 0.102 238); /* #1B6D99 */
+  --saffron: oklch(0.754 0.165 62.8); /* #F7941D */
+  --saffron-bright: oklch(0.78 0.163 63.2); /* #FF9D2E */
+  --mist: oklch(0.961 0.013 228.9); /* #EAF4F9 */
+  --haze: oklch(0.974 0.005 228.8); /* #F3F7F9 */
+  --cream: oklch(0.982 0.013 71.3); /* #FFF8F0 */
+  --ink: oklch(0.308 0.055 246.7); /* #16324A */
+  --ink-soft: oklch(0.538 0.032 248.4); /* #607080 */
+  --hairline: oklch(0.924 0.017 236.7); /* #DCE8F0 */
+
+  --background: oklch(1 0 0);
+  --foreground: var(--ink);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+  --primary: var(--navy);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--mist);
+  --secondary-foreground: var(--navy);
+  --muted: var(--haze);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--saffron);
+  --accent-foreground: oklch(0.24 0.05 60);
+  --destructive: oklch(0.55 0.21 27.3);
+  --destructive-foreground: oklch(1 0 0);
+  --border: var(--hairline);
+  --input: var(--hairline);
+  --ring: var(--azure);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-azure);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-saffron);
+    color: oklch(0.24 0.05 60);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---- Utilities ---- */
+
+@utility eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-saffron);
+}
+
+@utility eyebrow-muted {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+@utility shell {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 82rem;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility section-y {
+  padding-block: 4rem;
+
+  @media (min-width: 768px) {
+    padding-block: 5.5rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-block: 7rem;
+  }
+}
+
+@utility rule-orange {
+  &::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: var(--color-saffron);
+    margin-bottom: 1rem;
+  }
+}
+
+@utility zoom-media {
+  overflow: hidden;
+
+  & img {
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover img {
+    transform: scale(1.045);
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  &[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- Art direction ---- */
+
+/* Fine dotted texture used behind selected panels. */
+@utility dot-field {
+  background-image: radial-gradient(var(--color-hairline) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+@utility dot-field-light {
+  background-image: radial-gradient(oklch(1 0 0 / 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Thin offset frame behind a photograph. */
+@utility frame-offset {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -0.85rem -0.85rem 0.85rem 0.85rem;
+    border: 1px solid var(--color-saffron);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+/* Animated orange indicator for editorial rows. */
+@utility row-indicator {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    width: 0;
+    background: var(--color-saffron);
+    transition: width 480ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@utility arch-mask {
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  overflow: hidden;
+}
+
