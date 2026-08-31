@@ -14,12 +14,6 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-deep text-white">
       <div aria-hidden="true" className="dot-field-light absolute inset-0 opacity-30" />
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-8 left-1/2 hidden -translate-x-1/2 font-display text-[13rem] leading-none font-extrabold tracking-tight text-white/[0.04] uppercase select-none lg:block"
-      >
-        Ashrith
-      </span>
       <div className="shell relative grid gap-12 py-14 md:py-16 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-4">
           <Logo tone="light" />
@@ -169,14 +163,9 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {org.name}. All rights reserved.
           </p>
-          <div className="flex gap-5">
-            <Link to="/privacy-policy" className="transition-colors hover:text-white">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="transition-colors hover:text-white">
-              Terms
-            </Link>
-          </div>
+          <p className="text-white/35">
+            {org.trust} · Kota, Udupi District, Karnataka
+          </p>
         </div>
       </div>
     </footer>

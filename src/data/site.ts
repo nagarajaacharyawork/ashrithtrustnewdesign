@@ -91,7 +91,6 @@ export const mainNav: NavItem[] = [
   { label: "Campus Life", to: "/campus-life" },
   { label: "Leadership", to: "/leadership" },
   { label: "Gallery", to: "/gallery" },
-  { label: "Events", to: "/events" },
   { label: "Contact", to: "/contact" },
 ];
 

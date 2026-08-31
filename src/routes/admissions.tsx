@@ -74,7 +74,7 @@ function AdmissionsPage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section id="enquiry" className="section-y bg-haze">
         <div className="shell grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
           <div className="lg:sticky lg:top-32 lg:self-start">
@@ -108,7 +108,7 @@ function AdmissionsPage() {
         </div>
       </section>
 
-      <SectionCut from="haze" to="white" variant="diagonal" />
+      <SectionCut from="haze" to="white" variant="wave" />
       <section className="section-y bg-white">
         <div className="shell">
           <SectionHeading
@@ -127,7 +127,7 @@ function AdmissionsPage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="cream" variant="concave" />
+      <SectionCut from="white" to="cream" variant="wave" />
       <section className="section-y bg-cream">
         <div className="shell grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
           <div>

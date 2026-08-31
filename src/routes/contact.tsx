@@ -119,20 +119,20 @@ function ContactPage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell">
           <SectionHeading number="01" eyebrow="Find us" title="On NH-66 at Kota, Udupi District." />
-          <Reveal className="mt-10 border border-hairline bg-white p-2">
+          <Reveal className="mt-8 overflow-hidden border border-hairline bg-white p-2">
             <iframe
               title="Map showing Ashrith Group of Institutions, Kota, Udupi"
               src={org.mapEmbed}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-80 w-full md:h-[28rem]"
+              className="h-72 w-full md:h-[24rem]"
             />
           </Reveal>
-          <div className="mt-6">
+          <div className="mt-5">
             <a
               href={org.mapLink}
               target="_blank"
@@ -145,7 +145,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <SectionCut from="haze" to="white" variant="diagonal" />
+      <SectionCut from="haze" to="white" variant="wave" />
       <section className="section-y bg-white">
         <div className="shell grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
           <div>

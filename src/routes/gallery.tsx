@@ -40,7 +40,7 @@ function GalleryPage() {
 
       <section className="section-y bg-white">
         <div className="shell">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {galleryCategories.map((c) => (
               <button
                 key={c}
@@ -48,7 +48,7 @@ function GalleryPage() {
                 onClick={() => setCategory(c)}
                 aria-pressed={category === c}
                 className={cn(
-                  "border px-4 py-2 font-display text-[0.78rem] font-bold tracking-wide transition-colors",
+                  "h-9 border px-4 font-display text-[0.78rem] font-bold tracking-wide transition-colors",
                   category === c
                     ? "border-navy bg-navy text-white"
                     : "border-hairline bg-white text-ink-soft hover:border-navy/40 hover:text-navy",
@@ -59,12 +59,12 @@ function GalleryPage() {
             ))}
           </div>
 
-          <p aria-live="polite" className="mt-5 text-sm text-ink-soft">
+          <p aria-live="polite" className="mt-4 text-sm text-ink-soft">
             {items.length} {items.length === 1 ? "photograph" : "photographs"}
             {category !== "All" ? ` in ${category}` : ""}
           </p>
 
-          <div className="mt-8">
+          <div className="mt-6">
             {items.length > 0 ? (
               <Gallery items={items} />
             ) : (

@@ -35,7 +35,7 @@ function LeadershipPage() {
       />
 
       <section className="section-y bg-white">
-        <div className="shell grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
+        <div className="shell grid gap-0 lg:grid-cols-2">
           <Reveal className="bg-navy p-8 text-white md:p-12">
             <span
               aria-hidden="true"
@@ -54,20 +54,20 @@ function LeadershipPage() {
               &ldquo;{org.tagline}.&rdquo;
             </blockquote>
           </Reveal>
-          <Reveal delay={80} className="zoom-media">
+          <Reveal delay={80} className="zoom-media min-h-64">
             <img
               src={images.classroom}
               alt="Teaching in progress at the Ashrith campus"
               loading="lazy"
               width={1400}
               height={1600}
-              className="h-full min-h-72 w-full object-cover"
+              className="h-full w-full object-cover object-center"
             />
           </Reveal>
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell">
           <SectionHeading

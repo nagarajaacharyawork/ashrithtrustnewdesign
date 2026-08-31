@@ -99,31 +99,25 @@ export function PageHero({
         className="absolute inset-0 bg-[linear-gradient(105deg,oklch(0.33_0.079_246_/_0.95)_0%,oklch(0.33_0.079_246_/_0.72)_55%,oklch(0.33_0.079_246_/_0.45)_100%)]"
       />
       <div aria-hidden="true" className="dot-field-light absolute inset-0 opacity-30" />
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-6 -bottom-10 font-display text-[7rem] leading-none font-extrabold tracking-tight text-white/[0.05] uppercase select-none sm:text-[11rem] lg:text-[15rem]"
-      >
-        {eyebrow.split(" ")[0]}
-      </span>
-      <div className="shell relative pt-12 pb-20 md:pt-16 md:pb-28 lg:pt-20 lg:pb-32">
+      <div className="shell relative pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-18 lg:pb-28">
         {breadcrumbs ? <Breadcrumbs items={breadcrumbs} /> : null}
-        <div className="mt-6 flex items-center gap-3">
+        <div className="mt-5 flex items-center gap-3">
           <span aria-hidden="true" className="h-px w-10 bg-saffron" />
           <p className="eyebrow text-saffron-bright">{eyebrow}</p>
         </div>
-        <h1 className="mt-4 max-w-4xl text-[2.1rem] leading-[1.05] font-extrabold text-white sm:text-5xl lg:text-[3.5rem]">
+        <h1 className="mt-4 max-w-3xl text-[2rem] leading-[1.05] font-extrabold text-white sm:text-[2.75rem] lg:text-[3.25rem]">
           {title}
         </h1>
         {intro ? (
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
+          <p className="mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-white/75 md:text-base">
             {intro}
           </p>
         ) : null}
         {actions ? (
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{actions}</div>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{actions}</div>
         ) : null}
         {meta ? (
-          <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-tl-[1.5rem] rounded-br-[1.5rem] border border-white/15 bg-white/15 sm:grid-cols-4">
+          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-tl-[1.25rem] rounded-br-[1.25rem] border border-white/15 bg-white/15 sm:grid-cols-4">
             {meta.map((m, i) => (
               <div key={m.label} className="relative bg-navy-deep/80 px-4 py-4 backdrop-blur-sm">
                 <span
@@ -132,10 +126,10 @@ export function PageHero({
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <dt className="font-display text-[0.62rem] font-bold tracking-[0.16em] text-white/50 uppercase">
+                <dt className="font-display text-[0.6rem] font-bold tracking-[0.16em] text-white/50 uppercase">
                   {m.label}
                 </dt>
-                <dd className="mt-1.5 font-display text-base font-extrabold text-white sm:text-lg">
+                <dd className="mt-1.5 font-display text-sm font-extrabold text-white sm:text-base">
                   {m.value}
                 </dd>
               </div>
@@ -150,7 +144,7 @@ export function PageHero({
         className="absolute bottom-0 left-0 block h-10 w-full sm:h-16 md:h-20"
         focusable="false"
       >
-        <path d="M0,120 L0,60 C420,132 1020,132 1440,52 L1440,120 Z" fill={nextFill} />
+        <path d="M0,120 L0,66 C240,14 470,112 720,74 C980,34 1210,96 1440,52 L1440,120 Z" fill={nextFill} />
       </svg>
     </section>
   );

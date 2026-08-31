@@ -61,17 +61,17 @@ function CampusLifePage() {
           />
           <div className="mt-10 grid gap-px bg-hairline sm:grid-cols-2">
             {strands.map((s, i) => (
-              <Reveal key={s.title} delay={i * 60} className="bg-white p-7 md:p-9">
+              <Reveal key={s.title} delay={i * 60} className="flex flex-col bg-white p-7 md:p-9">
                 <span className="font-display text-sm font-extrabold text-saffron">0{i + 1}</span>
                 <h3 className="mt-4 font-display text-lg font-extrabold text-ink">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{s.body}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{s.body}</p>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell">
           <SectionHeading
@@ -90,7 +90,7 @@ function CampusLifePage() {
         </div>
       </section>
 
-      <SectionCut from="haze" to="white" variant="diagonal" />
+      <SectionCut from="haze" to="white" variant="wave" />
       <section className="section-y bg-white">
         <div className="shell">
           <p className="eyebrow">Student voice</p>
@@ -100,18 +100,13 @@ function CampusLifePage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="cream" variant="concave" />
+      <SectionCut from="white" to="cream" variant="wave" />
       <section className="section-y bg-cream">
         <div className="shell">
           <SectionHeading
             number="03"
             eyebrow="Recent happenings"
             title="Events across the academic year."
-            action={
-              <ActionLink to="/events" variant="outline">
-                All Events
-              </ActionLink>
-            }
           />
           <div className="mt-10">
             <EventList items={events.slice(0, 3)} />

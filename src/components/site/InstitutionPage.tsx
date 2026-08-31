@@ -1,6 +1,6 @@
 import { ArrowRight, Check } from "lucide-react";
 
-import { GhostWord, PhotoStack, SectionCut, SectionMark } from "@/components/site/art";
+import { PhotoStack, SectionCut, SectionMark } from "@/components/site/art";
 import { ActionLink } from "@/components/site/Action";
 import { CTASection, ProgrammeList } from "@/components/site/blocks";
 import { PageHero } from "@/components/site/PageHero";
@@ -43,7 +43,6 @@ export function InstitutionPage({ institution }: { institution: Institution }) {
       />
 
       <section className="section-y relative overflow-hidden bg-white pt-4 md:pt-8">
-        <GhostWord className="top-8 -right-6">{institution.shortName}</GhostWord>
         <div className="shell relative grid items-center gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16">
           <Reveal>
             <SectionMark number="01" label="Overview" />
@@ -75,7 +74,7 @@ export function InstitutionPage({ institution }: { institution: Institution }) {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell">
           <SectionHeading
@@ -85,19 +84,19 @@ export function InstitutionPage({ institution }: { institution: Institution }) {
           />
           <div className="mt-10 grid gap-px bg-hairline md:grid-cols-3">
             {institution.highlights.map((h, i) => (
-              <Reveal key={h.title} delay={i * 70} className="bg-white p-7 md:p-8">
+              <Reveal key={h.title} delay={i * 70} className="flex flex-col bg-white p-7 md:p-8">
                 <span className="font-display text-sm font-extrabold text-saffron">0{i + 1}</span>
                 <h3 className="mt-4 font-display text-lg leading-snug font-extrabold text-ink">
                   {h.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{h.body}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{h.body}</p>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <SectionCut from="haze" to="white" variant="diagonal" />
+      <SectionCut from="haze" to="white" variant="curve" />
       <section className="section-y bg-white">
         <div className="shell">
           <SectionHeading
@@ -116,7 +115,7 @@ export function InstitutionPage({ institution }: { institution: Institution }) {
         </div>
       </section>
 
-      <SectionCut from="white" to="cream" variant="concave" />
+      <SectionCut from="white" to="cream" variant="wave" />
       <section className="section-y bg-cream">
         <div className="shell grid gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
@@ -124,9 +123,9 @@ export function InstitutionPage({ institution }: { institution: Institution }) {
             <h2 className="mt-3 text-2xl leading-tight font-extrabold text-ink sm:text-3xl">
               Laboratories & learning spaces
             </h2>
-            <ul className="mt-7 space-y-3">
+            <ul className="mt-6 space-y-3">
               {institution.facilities.map((f) => (
-                <li key={f} className="flex gap-3 text-sm text-ink-soft">
+                <li key={f} className="flex items-start gap-3 text-sm text-ink-soft">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-saffron" aria-hidden="true" />
                   {f}
                 </li>
@@ -138,9 +137,9 @@ export function InstitutionPage({ institution }: { institution: Institution }) {
             <h2 className="mt-3 text-2xl leading-tight font-extrabold text-ink sm:text-3xl">
               Where graduates work
             </h2>
-            <ul className="mt-7 space-y-3">
+            <ul className="mt-6 space-y-3">
               {institution.careers.map((c) => (
-                <li key={c} className="flex gap-3 text-sm text-ink-soft">
+                <li key={c} className="flex items-start gap-3 text-sm text-ink-soft">
                   <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-saffron" aria-hidden="true" />
                   {c}
                 </li>

@@ -146,7 +146,6 @@ export function Header() {
               aria-label={open ? "Close menu" : "Open menu"}
               className="grid h-11 w-11 shrink-0 place-items-center border border-hairline text-navy transition-colors hover:bg-mist xl:hidden"
             >
-              {open ? <Menu className="hidden" /> : null}
               {open ? (
                 <X className="h-5 w-5" aria-hidden="true" />
               ) : (

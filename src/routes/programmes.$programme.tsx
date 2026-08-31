@@ -171,7 +171,7 @@ function ProgrammeDetail() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
           <div>
@@ -190,7 +190,7 @@ function ProgrammeDetail() {
 
       {related.length > 0 ? (
         <>
-          <SectionCut from="haze" to="white" variant="diagonal" />
+          <SectionCut from="haze" to="white" variant="wave" />
           <section className="section-y bg-white">
             <div className="shell">
               <SectionHeading

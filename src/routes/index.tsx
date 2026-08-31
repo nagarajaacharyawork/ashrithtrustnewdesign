@@ -2,10 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Phone } from "lucide-react";
 
 import { ActionLink } from "@/components/site/Action";
-import { ArtImage, GhostWord, PhotoStack, SectionCut, SectionMark } from "@/components/site/art";
+import { ArtImage, PhotoStack, SectionCut, SectionMark } from "@/components/site/art";
 import {
   CTASection,
-  EventCard,
   LeadershipProfile,
   ProgrammeList,
   StatisticBlock,
@@ -18,7 +17,6 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import {
   announcements,
-  events,
   gallery,
   images,
   institutions,
@@ -41,7 +39,6 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const featuredEvents = events.slice(0, 3);
 const previewProgrammes = programmes.slice(0, 5);
 const featuredLeader = leadership.find((l) => l.featured) ?? leadership[0]!;
 const supportingLeaders = leadership.filter((l) => l !== featuredLeader).slice(0, 4);
@@ -57,9 +54,6 @@ function HomePage() {
           className="absolute inset-0 bg-[radial-gradient(120%_100%_at_0%_0%,oklch(0.402_0.097_244.4)_0%,oklch(0.33_0.079_246)_60%)]"
         />
         <div aria-hidden="true" className="dot-field-light absolute inset-0 opacity-30" />
-        <GhostWord tone="light" className="-bottom-6 left-0 lg:-bottom-10">
-          Serve
-        </GhostWord>
 
         <div className="shell relative grid items-center gap-14 py-12 pb-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16 lg:py-20 lg:pb-32">
           <div>
@@ -138,7 +132,7 @@ function HomePage() {
           className="absolute bottom-0 left-0 block h-10 w-full sm:h-16 md:h-24"
           focusable="false"
         >
-          <path d="M0,120 L0,52 C420,140 1020,140 1440,44 L1440,120 Z" fill="var(--cream)" />
+          <path d="M0,120 L0,66 C240,14 470,112 720,74 C980,34 1210,96 1440,52 L1440,120 Z" fill="var(--cream)" />
         </svg>
       </section>
 
@@ -175,13 +169,10 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="cream" to="white" variant="curve" />
+      <SectionCut from="cream" to="white" variant="wave" />
 
       {/* --------------------------- INTRODUCTION ---------------------------- */}
       <section className="section-y relative overflow-hidden bg-white pt-4 md:pt-8">
-        <GhostWord className="-top-6 right-0 text-[10rem] sm:text-[16rem] lg:text-[24rem]">
-          15
-        </GhostWord>
         <div className="shell relative grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
           <Reveal>
             <SectionMark number="01" label="Who we are" />
@@ -240,11 +231,10 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="diagonal" />
+      <SectionCut from="white" to="haze" variant="wave" />
 
       {/* --------------------------- INSTITUTIONS ---------------------------- */}
       <section className="section-y relative overflow-hidden bg-haze pt-4 md:pt-8">
-        <GhostWord className="top-10 -left-6 text-mist">Care</GhostWord>
         <div className="shell relative">
           <SectionHeading
             number="01"
@@ -275,7 +265,7 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="haze" to="white" variant="concave" />
+      <SectionCut from="haze" to="white" variant="wave" />
 
       {/* ----------------------------- WHY ASHRITH ---------------------------- */}
       <section className="section-y relative overflow-hidden bg-white pt-4 md:pt-8">
@@ -330,9 +320,6 @@ function HomePage() {
 
       {/* ----------------------------- PROGRAMMES ---------------------------- */}
       <section className="section-y relative overflow-hidden bg-cream pt-4 md:pt-8">
-        <GhostWord tone="warm" className="top-8 -right-8">
-          Learn
-        </GhostWord>
         <div className="shell relative">
           <SectionHeading
             number="02"
@@ -351,7 +338,7 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="cream" to="navy" variant="arc" />
+      <SectionCut from="cream" to="navy" variant="wave" />
 
       {/* ----------------------------- STATISTICS ---------------------------- */}
       <section className="relative overflow-hidden bg-navy">
@@ -367,11 +354,10 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="navy" to="white" variant="curve" />
+      <SectionCut from="navy" to="white" variant="wave" />
 
       {/* ------------------------------- CAMPUS ------------------------------ */}
       <section className="section-y relative overflow-hidden bg-white pt-4 md:pt-8">
-        <GhostWord className="top-4 -left-6">Campus</GhostWord>
         <div className="shell relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal className="relative">
             <div className="zoom-media overflow-hidden rounded-b-[5rem] rounded-tl-[3rem] bg-mist">
@@ -433,11 +419,10 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="diagonalReverse" />
+      <SectionCut from="white" to="haze" variant="wave" />
 
       {/* -------------------------- LEARNING IN ACTION ----------------------- */}
       <section className="section-y relative overflow-hidden bg-haze pt-4 md:pt-8">
-        <GhostWord className="top-6 -right-6 text-mist">Practice</GhostWord>
         <div className="shell relative">
           <SectionHeading
             number="03"
@@ -470,7 +455,7 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="haze" to="white" variant="curve" />
+      <SectionCut from="haze" to="white" variant="wave" />
 
       {/* ----------------------------- CAMPUS LIFE --------------------------- */}
       <section className="section-y relative overflow-hidden bg-white pt-4 md:pt-8">
@@ -491,13 +476,10 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="cream" variant="step" />
+      <SectionCut from="white" to="cream" variant="wave" />
 
       {/* ----------------------------- LEADERSHIP ---------------------------- */}
       <section className="section-y relative overflow-hidden bg-cream pt-4 md:pt-8">
-        <GhostWord tone="warm" className="top-10 -left-6">
-          Trust
-        </GhostWord>
         <div className="shell relative">
           <SectionHeading
             number="05"
@@ -541,42 +523,16 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionCut from="cream" to="white" variant="concave" />
-
-      {/* ------------------------------- EVENTS ------------------------------ */}
-      <section className="section-y relative overflow-hidden bg-white pt-4 md:pt-8">
-        <div className="shell">
-          <SectionHeading
-            number="06"
-            eyebrow="Events & happenings"
-            title="What's happening at Ashrith."
-            action={
-              <ActionLink to="/events" variant="outline">
-                View All Events
-              </ActionLink>
-            }
-          />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {featuredEvents.map((e, i) => (
-              <Reveal key={e.slug} delay={i * 70}>
-                <EventCard event={e} index={i} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <SectionCut from="white" to="haze" variant="diagonal" />
+      <SectionCut from="cream" to="haze" variant="wave" />
 
       {/* -------------------------- STUDENT EXPERIENCE ----------------------- */}
       <section className="section-y relative overflow-hidden bg-haze pt-4 md:pt-8">
-        <GhostWord className="-top-4 right-0 text-mist">Voices</GhostWord>
         <div className="shell relative">
-          <SectionMark number="11" label="Student experience" />
+          <SectionMark number="07" label="Student experience" />
           <div className="mt-10">
             <Testimonial {...testimonial} />
           </div>
-          <div className="mt-12">
+          <div className="mt-10">
             <ActionLink to="/campus-life" variant="navy">
               Explore Student Life
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -596,7 +552,6 @@ function HomePage() {
         intro={`Applications for ${org.admissionYear} are open across nursing and paramedical programmes.`}
         image={images.studentsCampus}
         topTone="haze"
-        ghost="Ashrith"
       />
 
       <section className="border-t border-hairline bg-white py-8">

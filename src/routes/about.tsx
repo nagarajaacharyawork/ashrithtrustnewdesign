@@ -76,7 +76,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell">
           <SectionHeading
@@ -97,7 +97,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <SectionCut from="haze" to="white" variant="diagonal" />
+      <SectionCut from="haze" to="white" variant="wave" />
       <section className="section-y bg-white">
         <div className="shell">
           <SectionHeading number="02" eyebrow="Milestones" title="How the campus grew." />
@@ -120,7 +120,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="cream" variant="concave" />
+      <SectionCut from="white" to="cream" variant="wave" />
       <section className="section-y bg-cream">
         <div className="shell">
           <SectionHeading
@@ -149,7 +149,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <SectionCut from="navy" to="white" variant="arc" />
+      <SectionCut from="navy" to="white" variant="wave" />
       <section className="section-y bg-white">
         <div className="shell grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
           <div>

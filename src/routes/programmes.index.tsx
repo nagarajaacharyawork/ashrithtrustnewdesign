@@ -65,8 +65,8 @@ function ProgrammesPage() {
         <div className="shell">
           <SectionHeading number="01" eyebrow="Find your course" title="All programmes." />
 
-          <div className="mt-8 grid gap-4 border border-hairline bg-cream p-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-6 md:p-5">
-            <div className="flex min-w-0 flex-wrap gap-2">
+          <div className="mt-8 flex flex-col gap-3 border border-hairline bg-cream p-4 md:flex-row md:items-center md:gap-4 md:p-4">
+            <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
               {filters.map((f) => (
                 <button
                   key={f}
@@ -74,7 +74,7 @@ function ProgrammesPage() {
                   onClick={() => setFilter(f)}
                   aria-pressed={filter === f}
                   className={cn(
-                    "border px-4 py-2 font-display text-[0.78rem] font-bold tracking-wide transition-colors",
+                    "h-9 border px-4 font-display text-[0.78rem] font-bold tracking-wide transition-colors",
                     filter === f
                       ? "border-navy bg-navy text-white"
                       : "border-hairline bg-white text-ink-soft hover:border-navy/40 hover:text-navy",
@@ -84,7 +84,7 @@ function ProgrammesPage() {
                 </button>
               ))}
             </div>
-            <div className="md:w-64">
+            <div className="w-full md:w-60 md:shrink-0">
               <label htmlFor="programme-search" className="sr-only">
                 Search programmes
               </label>
@@ -95,7 +95,7 @@ function ProgrammesPage() {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search programmes…"
                 maxLength={80}
-                className="w-full border border-hairline bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink-soft/60 focus:border-azure focus:outline-none"
+                className="h-9 w-full border border-hairline bg-white px-4 text-sm text-ink placeholder:text-ink-soft/60 focus:border-azure focus:outline-none"
               />
             </div>
           </div>

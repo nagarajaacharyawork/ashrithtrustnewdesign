@@ -45,22 +45,22 @@ function CampusPage() {
             title="Everything students need within one campus."
             intro="Shared across both institutions, maintained for daily teaching use."
           />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {facilities.map((f, i) => (
-              <Reveal key={f.title} delay={i * 55} className="border border-hairline bg-white">
-                <div className="zoom-media">
+              <Reveal key={f.title} delay={i * 55} className="flex flex-col border border-hairline bg-white">
+                <div className="zoom-media overflow-hidden">
                   <img
                     src={f.image}
                     alt={f.title}
                     loading="lazy"
                     width={1400}
                     height={1000}
-                    className="aspect-[4/3] w-full object-cover"
+                    className="aspect-[16/10] w-full object-cover"
                   />
                 </div>
-                <div className="p-5">
+                <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-display text-base font-extrabold text-ink">{f.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">{f.body}</p>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{f.body}</p>
                 </div>
               </Reveal>
             ))}
@@ -68,7 +68,7 @@ function CampusPage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="curve" />
+      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>

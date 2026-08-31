@@ -17,8 +17,6 @@ import { Route as CampusLifeRouteImport } from './routes/campus-life'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as LeadershipRouteImport } from './routes/leadership'
-import { Route as EventsIndexRouteImport } from './routes/events.index'
-import { Route as EventsSlugRouteImport } from './routes/events.$slug'
 import { Route as InstitutionsIndexRouteImport } from './routes/institutions.index'
 import { Route as InstitutionsNursingRouteImport } from './routes/institutions.nursing'
 import { Route as InstitutionsParamedicalRouteImport } from './routes/institutions.paramedical'
@@ -65,16 +63,6 @@ const LeadershipRoute = LeadershipRouteImport.update({
   path: '/leadership',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EventsIndexRoute = EventsIndexRouteImport.update({
-  id: '/events/',
-  path: '/events/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventsSlugRoute = EventsSlugRouteImport.update({
-  id: '/events/$slug',
-  path: '/events/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const InstitutionsIndexRoute = InstitutionsIndexRouteImport.update({
   id: '/institutions/',
   path: '/institutions/',
@@ -110,11 +98,9 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/leadership': typeof LeadershipRoute
-  '/events/$slug': typeof EventsSlugRoute
   '/institutions/nursing': typeof InstitutionsNursingRoute
   '/institutions/paramedical': typeof InstitutionsParamedicalRoute
   '/programmes/$programme': typeof ProgrammesProgrammeRoute
-  '/events/': typeof EventsIndexRoute
   '/institutions/': typeof InstitutionsIndexRoute
   '/programmes/': typeof ProgrammesIndexRoute
 }
@@ -127,11 +113,9 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/leadership': typeof LeadershipRoute
-  '/events/$slug': typeof EventsSlugRoute
   '/institutions/nursing': typeof InstitutionsNursingRoute
   '/institutions/paramedical': typeof InstitutionsParamedicalRoute
   '/programmes/$programme': typeof ProgrammesProgrammeRoute
-  '/events': typeof EventsIndexRoute
   '/institutions': typeof InstitutionsIndexRoute
   '/programmes': typeof ProgrammesIndexRoute
 }
@@ -145,11 +129,9 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/leadership': typeof LeadershipRoute
-  '/events/$slug': typeof EventsSlugRoute
   '/institutions/nursing': typeof InstitutionsNursingRoute
   '/institutions/paramedical': typeof InstitutionsParamedicalRoute
   '/programmes/$programme': typeof ProgrammesProgrammeRoute
-  '/events/': typeof EventsIndexRoute
   '/institutions/': typeof InstitutionsIndexRoute
   '/programmes/': typeof ProgrammesIndexRoute
 }
@@ -164,11 +146,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/leadership'
-    | '/events/$slug'
     | '/institutions/nursing'
     | '/institutions/paramedical'
     | '/programmes/$programme'
-    | '/events/'
     | '/institutions/'
     | '/programmes/'
   fileRoutesByTo: FileRoutesByTo
@@ -181,11 +161,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/leadership'
-    | '/events/$slug'
     | '/institutions/nursing'
     | '/institutions/paramedical'
     | '/programmes/$programme'
-    | '/events'
     | '/institutions'
     | '/programmes'
   id:
@@ -198,11 +176,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/leadership'
-    | '/events/$slug'
     | '/institutions/nursing'
     | '/institutions/paramedical'
     | '/programmes/$programme'
-    | '/events/'
     | '/institutions/'
     | '/programmes/'
   fileRoutesById: FileRoutesById
@@ -216,11 +192,9 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   LeadershipRoute: typeof LeadershipRoute
-  EventsSlugRoute: typeof EventsSlugRoute
   InstitutionsNursingRoute: typeof InstitutionsNursingRoute
   InstitutionsParamedicalRoute: typeof InstitutionsParamedicalRoute
   ProgrammesProgrammeRoute: typeof ProgrammesProgrammeRoute
-  EventsIndexRoute: typeof EventsIndexRoute
   InstitutionsIndexRoute: typeof InstitutionsIndexRoute
   ProgrammesIndexRoute: typeof ProgrammesIndexRoute
 }
@@ -283,20 +257,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeadershipRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/events/': {
-      id: '/events/'
-      path: '/events'
-      fullPath: '/events/'
-      preLoaderRoute: typeof EventsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/events/$slug': {
-      id: '/events/$slug'
-      path: '/events/$slug'
-      fullPath: '/events/$slug'
-      preLoaderRoute: typeof EventsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/institutions/': {
       id: '/institutions/'
       path: '/institutions'
@@ -344,11 +304,9 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   LeadershipRoute: LeadershipRoute,
-  EventsSlugRoute: EventsSlugRoute,
   InstitutionsNursingRoute: InstitutionsNursingRoute,
   InstitutionsParamedicalRoute: InstitutionsParamedicalRoute,
   ProgrammesProgrammeRoute: ProgrammesProgrammeRoute,
-  EventsIndexRoute: EventsIndexRoute,
   InstitutionsIndexRoute: InstitutionsIndexRoute,
   ProgrammesIndexRoute: ProgrammesIndexRoute,
 }
