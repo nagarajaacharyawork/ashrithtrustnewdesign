@@ -2,6 +2,7 @@ import { Link, Outlet, createRootRoute, useRouter } from "@tanstack/react-router
 
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { AdmissionPopup } from "@/components/site/AdmissionPopup";
 
 function NotFoundComponent() {
   return (
@@ -89,6 +90,7 @@ function RootComponent() {
         </main>
         <Footer />
       </div>
+      <AdmissionPopup />
     </>
   );
 }
