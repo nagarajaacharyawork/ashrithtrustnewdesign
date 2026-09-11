@@ -96,7 +96,7 @@ export const mainNav: NavItem[] = [
 
 export const stats = [
   { value: 15, suffix: "+", label: "Years of Service" },
-  { value: 1200, suffix: "+", label: "Students & Alumni" },
+  { value: 4000, suffix: "+", label: "Students & Alumni" },
   { value: 50, suffix: "+", label: "Faculty & Mentors" },
   { value: 2, suffix: "", label: "Institutions" },
   { value: 99, suffix: "%", label: "Placement Assistance" },
@@ -302,39 +302,6 @@ export const programmes: Programme[] = [
       "Community and school health services",
     ],
     image: skillsLab,
-  },
-  {
-    slug: "auxiliary-nursing-midwifery",
-    name: "Auxiliary Nursing & Midwifery (ANM)",
-    category: "Nursing",
-    institution: "Ashrith College & School of Nursing",
-    institutionSlug: "nursing",
-    duration: "2 Years",
-    type: "Diploma",
-    short:
-      "A two-year community-focused nursing diploma centred on primary healthcare, maternal and child health.",
-    overview:
-      "ANM prepares health workers for primary and community healthcare settings, with training in maternal and child health, immunisation, health education and basic nursing procedures.",
-    eligibility:
-      "PLACEHOLDER — Eligibility follows the prescribed norms for ANM admission. Confirm current requirements with the admissions office.",
-    curriculum: [
-      "Community health nursing and primary healthcare",
-      "Maternal and child health, midwifery practice",
-      "Health promotion, immunisation and nutrition",
-      "Basic nursing procedures and first aid",
-    ],
-    outcomes: [
-      "Deliver primary healthcare services in community settings",
-      "Support antenatal, natal and postnatal care",
-      "Conduct health education and immunisation activities",
-    ],
-    training: "Field postings in community health centres and rural outreach programmes.",
-    careers: [
-      "Auxiliary nurse midwife in primary health centres",
-      "Community health worker",
-      "Maternal and child health services",
-    ],
-    image: eventHealthCamp,
   },
   {
     slug: "medical-laboratory-technology",
@@ -620,34 +587,31 @@ export type Leader = {
 
 export const leadership: Leader[] = [
   {
-    name: "Dr. Vidyadhar Shetty K.",
-    role: "Director & Trustee",
-    initials: "VS",
-    featured: true,
-    bio: "Dr. Vidyadhar Shetty K. leads Ashrith Trust's education initiatives, guiding both institutions towards practice-led healthcare teaching and community service.",
-  },
-  {
     name: "K. R. Hegde",
-    role: "Chairman & Managing Trustee",
+    role: "Managing Trustee",
     initials: "KH",
+    featured: true,
     bio: "Founding trustee of Ashrith Trust (R.), after whom the College of Paramedical Sciences is named.",
   },
   {
-    name: "Dr. Vishwanath Shetty",
+    name: "Dr. Vidyadhar Shetty",
+    role: "Managing Director",
+    initials: "VS",
+    featured: false,
+    bio: "Dr. Vidyadhar Shetty leads Ashrith Trust's education initiatives, guiding both institutions towards practice-led healthcare teaching and community service.",
+  },
+  {
+    name: "Sarojini Hegde",
+    role: "Trustee",
+    initials: "SH",
+    featured: false,
+    bio: "PLACEHOLDER — Biography to be provided by the institution.",
+  },
+  {
+    name: "Vishwanath Shetty",
     role: "Trustee",
     initials: "VN",
-    bio: "PLACEHOLDER — Biography to be provided by the institution.",
-  },
-  {
-    name: "Sarojini R. Hegde",
-    role: "Managing Trustee",
-    initials: "SH",
-    bio: "PLACEHOLDER — Biography to be provided by the institution.",
-  },
-  {
-    name: "Ashrith Hegde",
-    role: "Trustee",
-    initials: "AH",
+    featured: false,
     bio: "PLACEHOLDER — Biography to be provided by the institution.",
   },
 ];
@@ -755,7 +719,7 @@ export const timeline = [
   { year: "2011", title: "Nursing education begins", body: "Ashrith College & School of Nursing opens at the Kota campus." },
   { year: "2016", title: "Paramedical sciences added", body: "K. R. Hegde College of Paramedical Sciences is established to train allied health technologists." },
   { year: "2020", title: "Laboratories expanded", body: "Skills, simulation and diagnostic laboratories are upgraded across both institutions." },
-  { year: "2026", title: "Fifteen years of service", body: "Over 1200 students and alumni have passed through the Ashrith campus." },
+  { year: "2026", title: "Fifteen years of service", body: "Over 4000 students and alumni have passed through the Ashrith campus." },
 ];
 
 export const testimonials = [
@@ -772,7 +736,7 @@ export const testimonials = [
 export const faqs = [
   {
     q: "Which programmes does Ashrith offer?",
-    a: "Ashrith offers nursing programmes (B.Sc. Nursing, GNM, ANM) through Ashrith College & School of Nursing, and allied health diplomas (DMLT, DOT&AT, DMIT, DDT) through K. R. Hegde College of Paramedical Sciences.",
+    a: "Ashrith offers nursing programmes (B.Sc. Nursing, GNM) through Ashrith College & School of Nursing, and allied health diplomas (DMLT, DOT&AT, DMIT, DDT) through K. R. Hegde College of Paramedical Sciences.",
   },
   {
     q: "How do I apply for admission?",

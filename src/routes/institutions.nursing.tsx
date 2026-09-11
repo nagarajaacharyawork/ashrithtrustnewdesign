@@ -11,7 +11,7 @@ export const Route = createFileRoute("/institutions/nursing")({
     pageHead({
       title: "Ashrith College & School of Nursing",
       description:
-        "B.Sc. Nursing, GNM and ANM programmes at Ashrith College & School of Nursing, Kota, Udupi — skills-lab practice and supervised clinical postings from year one.",
+        "B.Sc. Nursing and GNM programmes at Ashrith College & School of Nursing, Kota, Udupi — skills-lab practice and supervised clinical postings from year one.",
       path: "/institutions/nursing",
     }),
   component: () => <InstitutionPage institution={institution} />,

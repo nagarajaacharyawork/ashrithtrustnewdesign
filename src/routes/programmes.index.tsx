@@ -13,7 +13,7 @@ export const Route = createFileRoute("/programmes/")({
     pageHead({
       title: "Programmes & Courses",
       description:
-        "Explore nursing and paramedical programmes at Ashrith — B.Sc. Nursing, GNM, ANM, DMLT, operation theatre, imaging and dialysis technology diplomas.",
+        "Explore nursing and paramedical programmes at Ashrith — B.Sc. Nursing, GNM, DMLT, operation theatre, imaging and dialysis technology diplomas.",
       path: "/programmes",
     }),
   component: ProgrammesPage,

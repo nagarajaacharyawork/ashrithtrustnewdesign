@@ -50,7 +50,7 @@ function AboutPage() {
               <p>
                 K. R. Hegde College of Paramedical Sciences followed, extending the same
                 practice-first approach to allied health technology. Together the institutions have
-                taught more than 1200 students and alumni.
+                taught more than 4000 students and alumni.
               </p>
               <p>
                 The Trust's motto — <strong className="text-ink">{org.tagline}</strong> — is not
