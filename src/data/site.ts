@@ -54,7 +54,7 @@ export const org = {
     line2: "Karnataka 576221, India",
     full: "NH-66, Kota, Udupi Taluk & District, Karnataka 576221",
   },
-  phones: ["+91 820 2586777", "+91 98800 58567"] as [string, string],
+  phones: ["+91 820 2586777", "+91 91480 87860", "+91 98800 58567"] as [string, string, string],
   email: "info@ashrithgroup.org",
   admissionsEmail: "admissions@ashrithgroup.org",
   officeHours: [
@@ -316,7 +316,7 @@ export const programmes: Programme[] = [
     overview:
       "DMLT trains technologists to collect, process and analyse clinical samples accurately. Students work at the bench from the first term, learning instrument handling, quality control and reporting discipline.",
     eligibility:
-      "PLACEHOLDER — Eligibility follows the prescribed norms for DMLT admission. Confirm current requirements with the admissions office.",
+      "PUC (10+2) any Stream - Students from any academic background can apply for admission to this medical laboratory technology program.",
     curriculum: [
       "Human anatomy, physiology and laboratory basics",
       "Haematology and blood banking",
@@ -350,7 +350,7 @@ export const programmes: Programme[] = [
     overview:
       "This diploma prepares technicians who keep the operation theatre safe and ready — from sterile supply and instrument sets to anaesthesia equipment checks and intra-operative monitoring support.",
     eligibility:
-      "PLACEHOLDER — Eligibility follows the prescribed norms for DOT&AT admission. Confirm current requirements with the admissions office.",
+      "PUC (10+2) any Stream - Students from any academic background can apply for admission to this operation theatre and anaesthesia technology program.",
     curriculum: [
       "Anatomy, physiology and applied pharmacology",
       "Sterilisation, asepsis and infection control",
@@ -384,7 +384,7 @@ export const programmes: Programme[] = [
     overview:
       "DMIT develops imaging technologists who can position patients correctly, produce diagnostic-quality images and work safely with radiation in a busy department.",
     eligibility:
-      "PLACEHOLDER — Eligibility follows the prescribed norms for DMIT admission. Confirm current requirements with the admissions office.",
+      "PUC (10+2) any Stream - Students from any academic background can apply for admission to this medical imaging technology program.",
     curriculum: [
       "Radiographic anatomy and positioning",
       "Physics of radiation and image formation",
@@ -411,30 +411,63 @@ export const programmes: Programme[] = [
     category: "Paramedical",
     institution: "K. R. Hegde College of Paramedical Sciences",
     institutionSlug: "paramedical",
-    duration: "2 Years",
+    duration: "3 Years",
     type: "Diploma",
     short:
-      "Renal replacement therapy training covering machine operation, water treatment, vascular access care and patient monitoring.",
+      "Comprehensive renal replacement therapy training covering machine operation, water treatment, vascular access care and patient monitoring.",
     overview:
-      "DDT prepares technicians for dialysis units: preparing and monitoring machines, managing the dialysis session safely and supporting patients through long-term treatment.",
+      "This 3-year DDT program prepares technicians for dialysis units: preparing and monitoring machines, managing the dialysis session safely and supporting patients through long-term treatment with comprehensive theoretical and practical training.",
     eligibility:
-      "PLACEHOLDER — Eligibility follows the prescribed norms for DDT admission. Confirm current requirements with the admissions office.",
+      "PUC (10+2) any Stream - Students from any academic background can apply for admission to this comprehensive dialysis technology program.",
     curriculum: [
-      "Renal anatomy, physiology and pathology",
-      "Principles of haemodialysis and peritoneal dialysis",
-      "Dialysis machine operation and water treatment",
-      "Vascular access care and infection control",
-      "Patient monitoring and emergency management",
+      "Year 1 — Renal anatomy, physiology, basic medical sciences, fundamentals of dialysis",
+      "Year 2 — Dialysis machine operation, water treatment systems, vascular access care",
+      "Year 3 — Advanced patient monitoring, emergency management, practice management, internship",
     ],
     outcomes: [
       "Set up and monitor dialysis sessions safely",
       "Maintain machines, water treatment and records",
       "Recognise and escalate intra-dialytic complications",
+      "Provide comprehensive patient care and counseling",
     ],
     training: "Supervised dialysis unit exposure with progressive independence.",
     careers: [
       "Dialysis technician in hospitals and standalone units",
       "Nephrology department support roles",
+    ],
+    image: imagingTech,
+  },
+  {
+    slug: "ophthalmic-technology",
+    name: "Diploma in Ophthalmic Technology (DOT)",
+    category: "Paramedical",
+    institution: "K. R. Hegde College of Paramedical Sciences",
+    institutionSlug: "paramedical",
+    duration: "3 Years",
+    type: "Diploma",
+    short:
+      "Comprehensive eye care technology training covering vision testing, diagnostic procedures, surgical assistance and optical dispensing.",
+    overview:
+      "This 3-year diploma program prepares ophthalmic technicians to assist in comprehensive eye care. Students learn vision assessment, diagnostic testing, surgical support, and optical services to work effectively in eye care settings.",
+    eligibility:
+      "PUC (10+2) any Stream - Students from any academic background can apply for admission to this comprehensive ophthalmic technology program.",
+    curriculum: [
+      "Year 1 — Ocular anatomy, physiology, basic optics, refraction principles, vision testing",
+      "Year 2 — Diagnostic procedures, tonometry, perimetry, optical dispensing, contact lenses",
+      "Year 3 — Surgical assistance, advanced diagnostics, practice management, internship",
+    ],
+    outcomes: [
+      "Perform comprehensive vision testing and refraction",
+      "Operate ophthalmic diagnostic equipment safely",
+      "Assist in eye surgeries and procedures",
+      "Provide optical dispensing and patient counseling services",
+    ],
+    training: "Clinical rotations in eye hospitals, outpatient clinics, and optical dispensing centers with supervised hands-on experience.",
+    careers: [
+      "Ophthalmic technician in eye hospitals and clinics",
+      "Optical dispenser in retail and clinical settings",
+      "Vision screening specialist",
+      "Surgical assistant in ophthalmic procedures",
     ],
     image: imagingTech,
   },
