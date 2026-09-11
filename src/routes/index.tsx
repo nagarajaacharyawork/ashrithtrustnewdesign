@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
     pageHead({
       title: "Ashrith Group of Institutions | Nursing & Paramedical, Udupi",
       description:
-        "Nursing and paramedical education at Kota, Udupi District, Karnataka. Ashrith Group of Institutions offers B.Sc. Nursing, GNM, ANM and allied health diplomas with supervised clinical training.",
+        "Nursing and paramedical education at Kota, Udupi District, Karnataka. Ashrith Group of Institutions offers B.Sc. Nursing, GNM and allied health diplomas with supervised clinical training.",
       path: "/",
     }),
   component: HomePage,
@@ -85,7 +85,7 @@ function HomePage() {
             <dl className="mt-12 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-white/15 pt-8 sm:grid-cols-4">
               {[
                 { v: "15+", l: "Years" },
-                { v: "1200+", l: "Students & Alumni" },
+                { v: "4000+", l: "Students & Alumni" },
                 { v: "99%", l: "Placement Assistance" },
                 { v: "50+", l: "Faculty & Mentors" },
               ].map((s) => (
@@ -512,9 +512,9 @@ function HomePage() {
                 {org.trust} · {org.tagline}
               </p>
             </Reveal>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="flex flex-col justify-center gap-4">
               {supportingLeaders.map((l, i) => (
-                <Reveal key={l.name} delay={i * 60} className={i % 2 === 1 ? "sm:mt-6" : ""}>
+                <Reveal key={l.name} delay={i * 60}>
                   <LeadershipProfile leader={l} compact />
                 </Reveal>
               ))}

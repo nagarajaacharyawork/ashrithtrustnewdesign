@@ -67,7 +67,6 @@ function LeadershipPage() {
         </div>
       </section>
 
-      <SectionCut from="white" to="haze" variant="wave" />
       <section className="section-y bg-haze">
         <div className="shell">
           <SectionHeading
@@ -75,12 +74,54 @@ function LeadershipPage() {
             eyebrow="Board of trustees"
             title="Trustees and management."
           />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {others.map((l, i) => (
-              <Reveal key={l.name} delay={i * 60}>
-                <LeadershipProfile leader={l} />
-              </Reveal>
-            ))}
+          <div className="mt-10 grid gap-8 lg:grid-cols-3">
+            {/* Main featured card (K.R. Hegde) - spans 2 columns */}
+            <Reveal className="lg:col-span-2">
+              <article className="relative flex flex-col rounded-tl-[1.75rem] rounded-br-[1.75rem] border border-hairline bg-white p-8 h-full">
+                <span
+                  aria-hidden="true"
+                  className="grid h-20 w-20 place-items-center rounded-tl-[1.1rem] rounded-br-[1.1rem] bg-navy font-display text-2xl font-extrabold text-white"
+                >
+                  {featured.initials}
+                </span>
+                <div className="mt-6 flex-1">
+                  <h3 className="font-display text-2xl leading-snug font-extrabold text-ink">
+                    {featured.name}
+                  </h3>
+                  <p className="mt-2 font-display text-[0.7rem] font-bold tracking-[0.14em] text-saffron uppercase">
+                    {featured.role}
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-ink-soft">{featured.bio}</p>
+                  <blockquote className="mt-6 border-t border-hairline pt-6 font-display text-base leading-snug font-bold text-ink">
+                    &ldquo;{org.tagline}.&rdquo;
+                  </blockquote>
+                </div>
+              </article>
+            </Reveal>
+
+            {/* Vertical stack of horizontal strip cards for other trustees - single column */}
+            <div className="flex flex-col justify-center gap-6">
+              {others.map((leader, i) => (
+                <Reveal key={leader.name} delay={(i + 1) * 80}>
+                  <article className="relative flex items-center gap-4 rounded-tl-[1.75rem] rounded-br-[1.75rem] border border-hairline bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-saffron/40 hover:shadow-soft min-h-[100px]">
+                    <span
+                      aria-hidden="true"
+                      className="grid h-14 w-14 shrink-0 place-items-center rounded-tl-[1.1rem] rounded-br-[1.1rem] bg-mist font-display text-lg font-extrabold text-navy ring-1 ring-navy/10"
+                    >
+                      {leader.initials}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-display text-base leading-snug font-extrabold text-ink">
+                        {leader.name}
+                      </h3>
+                      <p className="mt-1 font-display text-[0.68rem] font-bold tracking-[0.14em] text-saffron uppercase">
+                        {leader.role}
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
