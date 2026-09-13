@@ -54,8 +54,8 @@ export const org = {
     line2: "Karnataka 576221, India",
     full: "NH-66, Kota, Udupi Taluk & District, Karnataka 576221",
   },
-  phones: ["+91 820 2586777", "+91 91480 87860", "+91 98800 58567"] as [string, string, string],
-  email: "info@ashrithgroup.org",
+  phones: ["+91 91480 87860", "+91 98800 58567"] as [string, string],
+  email: "trustashrith@gmail.com",
   admissionsEmail: "admissions@ashrithgroup.org",
   officeHours: [
     { day: "Monday – Friday", time: "9:00 AM – 5:00 PM" },
@@ -66,8 +66,8 @@ export const org = {
     "https://www.google.com/maps?q=Kota,+Udupi,+Karnataka+576221&output=embed",
   mapLink: "https://www.google.com/maps/search/?api=1&query=Kota%2C+Udupi%2C+Karnataka+576221",
   social: [
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "Facebook", href: "https://facebook.com" },
+    { label: "Instagram", href: "https://www.instagram.com/ashrith.trust?stkn=MXFsazM4ZzZ6bDRsNg==" },
+    { label: "Facebook", href: "https://www.facebook.com/share/1JGKbXXpz4/" },
     { label: "YouTube", href: "https://youtube.com" },
     { label: "LinkedIn", href: "https://linkedin.com" },
   ],
